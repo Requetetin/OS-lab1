@@ -1,0 +1,36 @@
+1.
+Compile  el  primer  programa  y  ejecútelo  varias  veces.  Responda:  ¿por  qué  aparecen  números 
+diferentes cada vez?
+	-El valor de retorno es el ID del proceso actual. Cada vez que se corre, se utilizan diferentes subprocesos.
+
+Proceda  a  compilar  el  segundo  programa  y  ejecútelo  una  vez.  ¿Por  qué  aparecen  dos  números 
+distintos a pesar de que estamos ejecutando un único programa? 
+	-Porque los dos programas ejecutados son independientes y usan un proceso único.
+
+
+¿Por qué el primer y el segundo números son iguales? 
+	-Por la relación padre/hijo creada al momento del fork. 
+
+
+En la terminal, ejecute el comando top (que despliega el top de procesos en cuanto a consumo 
+de  CPU)  y  note  cuál  es  el  primer  proceso  en  la  lista  (con  identificador  1).  ¿Para  qué  sirve  este 
+proceso?
+	-El proceso en la lista es root (systemd). Este maneja el sistema y servicios. Entre estos servicios están: 'service', 'socket', 'mount', entre otros.
+
+
+
+2.
+Observe el resultado desplegado. ¿Por qué la primera llamada que aparece es execve?
+
+
+Ubique las llamadas de sistema realizadas por usted. ¿Qué significan los resultados (números que 
+están luego del signo ‘=’)?
+
+
+¿Por qué entre las llamadas realizadas por usted hay un read vacío?
+
+
+Identifique  tres  servicios  distintos  provistos  por  el  sistema  operativo  en  este  strace.  Liste  y 
+explique brevemente las llamadas a sistema que corresponden a los servicios identificados (puede 
+incluir  read,  write,  open  o  close  que  el  sistema  haga  por  usted,  no  los  que  usted  haya 
+producido directamente con su programa).
